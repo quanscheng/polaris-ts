@@ -1,7 +1,7 @@
-import { Main } from '../layouts/Main'
-import { ErrorPage } from '../pages/error/ErrorPage'
-import { Page404 } from '../pages/error/Page404'
-import { HomePage } from '../pages/home/HomePage'
+import { Main } from '@/layouts/Main'
+import { ErrorPage } from '@/pages/error/ErrorPage'
+import { Page404 } from '@/pages/error/Page404'
+import { HomePage } from '@/pages/home/HomePage'
 
 export const routes = [
   {

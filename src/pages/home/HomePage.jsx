@@ -1,5 +1,5 @@
+import { getHomeInfo } from '@/api/home'
 import { useEffect, useState } from 'react'
-import { getHomeInfo } from '../../api/home'
 
 export const HomePage = () => {
   const [repoNote, setRepoNote] = useState('')
