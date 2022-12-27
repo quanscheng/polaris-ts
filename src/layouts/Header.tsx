@@ -1,6 +1,6 @@
+import naruto from '@/assets/webp/naruto_png.webp'
 import { TopBar } from '@shopify/polaris'
 import { useCallback, useState } from 'react'
-
 export const Header = () => {
   const [userMenuActive, setUserMenuActive] = useState(false)
 
@@ -19,9 +19,10 @@ export const Header = () => {
   const userMenuMarkup = (
     <TopBar.UserMenu
       actions={userMenuActions}
-      name="Dharma"
+      name="Naruto"
       detail={storeName}
-      initials="D"
+      avatar={naruto}
+      initials="N"
       open={userMenuActive}
       onToggle={toggleUserMenuActive}
     />

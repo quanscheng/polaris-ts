@@ -1,13 +1,15 @@
 import { Main } from '@/layouts/Main'
 import { ErrorPage } from '@/pages/error/ErrorPage'
-import { Page404 } from '@/pages/error/Page404'
+import { RootErrorPage } from '@/pages/error/RootErrorPage'
+import { Example } from '@/pages/example/Example'
 import { HomePage } from '@/pages/home/HomePage'
+import { RedirectPage } from '@/pages/redirect/RedirectPage'
 
 export const routes = [
   {
     path: '/',
     element: <Main />,
-    errorElement: <Page404 />,
+    errorElement: <RootErrorPage />,
     children: [
       {
         errorElement: <ErrorPage />,
@@ -16,10 +18,10 @@ export const routes = [
             index: true,
             element: <HomePage />,
           },
-          // {
-          //   path: '/media-outlets',
-          //   element: <Outlets />,
-          // },
+          {
+            path: '/example',
+            element: <Example />,
+          },
         ],
       },
     ],
@@ -28,8 +30,8 @@ export const routes = [
   //   path: '/signin',
   //   element: <SignIn />,
   // },
-  // {
-  //   path: '/redirect',
-  //   element: <Redirect />,
-  // },
+  {
+    path: '/redirect',
+    element: <RedirectPage />,
+  },
 ]

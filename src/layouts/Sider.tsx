@@ -19,13 +19,13 @@ export const Sider = () => {
       exactMatch: true,
     },
     {
-      url: '/program',
-      label: 'Program',
+      url: '/example',
+      label: 'Example',
       icon: PlanMajor,
     },
     {
       url: '/notifications',
-      label: 'Notifications',
+      label: 'root error page',
       icon: NotificationMajor,
       // exactMatch: true,
       // badge: '15',
