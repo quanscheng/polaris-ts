@@ -1,14 +1,12 @@
-import { getHomeInfo } from '@/api/home'
-import { useEffect, useState } from 'react'
+import { getFetcher } from '@/api/fetcher'
+import { TEST_GET_URL } from '@/api/home'
+import useSWR from 'swr'
 
 export const HomePage = () => {
-  const [repoNote, setRepoNote] = useState('')
-  const testReq = async () => {
-    const { repo } = await getHomeInfo()
-    setRepoNote(repo.description)
-  }
-  useEffect(() => {
-    testReq()
-  }, [])
-  return <div>HomePage: {repoNote}</div>
+  const { data, error, isLoading } = useSWR([TEST_GET_URL], getFetcher)
+
+  if (isLoading) return <>loading...</>
+  if (error) return <>error !</>
+
+  return <div>HomePage: {data.repo.description}</div>
 }

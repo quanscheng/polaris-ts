@@ -1,3 +1,1 @@
-import { api } from '@/configs/generalApi'
-
-export const getHomeInfo = () => api.get(`https://ungh.cc/repos/unjs/h3`)
+export const TEST_GET_URL = 'https://ungh.cc/repos/unjs/h3'
